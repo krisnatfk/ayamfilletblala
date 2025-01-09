@@ -1,0 +1,399 @@
+body {
+    padding-top: 138px; /* Sesuaikan dengan tinggi navbar Anda */
+}
+
+.bg-navy {
+    background-color: #1c428f !important;
+    color: #ffffff;
+}
+
+.bg-secondary {
+    background-color: #edf1f7 !important;
+}
+
+.bg-white {
+    background-color: white;
+}
+
+
+
+.marquee-text {
+    display: inline-block; /* Make it inline-block to enable scrolling */
+    white-space: nowrap; /* Prevent text wrapping */
+    overflow: hidden; /* Hide overflow */
+    animation: marquee 15s linear infinite; /* Animation settings */
+}
+
+@keyframes marquee {
+    0% { transform: translateX(-220%); } /* Start from right */
+    100% { transform: translateX(220%); } /* End at left */
+}
+
+.small-text {
+    font-size: 0.775rem;
+}
+
+#about h2 {
+    font-size: 3rem;
+    font-weight: 600;
+    color: black; 
+}
+
+#about p {
+    font-size: 1.125rem;
+    line-height: 1.8;
+    color: #555;
+}
+
+#about h4 {
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-top: 20px;
+}
+
+#about img {
+    width: 100%;
+    max-height: 450px;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+}
+
+#about img:hover {
+    transform: scale(1.05);
+}
+
+ul li {
+    font-size: 1.125rem;
+    line-height: 1.7;
+}
+
+
+.custom-search {
+    width: 1000%;
+    height: 20%;
+    border-radius: 50px;
+    margin-right: 15px;
+}
+
+@media (max-width: 768px) {
+    .navbar-nav {
+        text-align: center; /* Memusatkan item menu */
+    }
+    .nav-item {
+        width: 100%; /* Item menu mengambil lebar penuh */
+    }
+}
+
+.nav-link {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin: 0 30px;
+    position: relative;
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -0px;
+    height: 2px;
+    background: white;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.nav-link:hover::after,
+.nav-link:focus::after {
+    transform: scaleX(1);
+}
+
+.nav-link:hover {
+    color: white;
+}
+
+.nav-link:active {
+    color: #ffa500;
+    transform: scale(0.95);
+}
+
+.feature-icon {
+    color: #1c428f;
+    transition: transform 0.3s ease;
+}
+
+.feature-icon:hover {
+    transform: scale(1.2);
+}
+
+#features h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 32px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.brand-item {
+    padding: 10px;
+}
+
+.carousel-item {
+	height: 119vh;
+	min-height: 30px;
+}
+.carousel-caption {
+	bottom: 220px;
+	z-index: 2;
+}
+.carousel-caption h5 {
+	font-size: 45px;
+    color: black;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	margin-top: 25px;
+}
+.carousel-caption p {
+	width: 60%;
+    color: black;
+	margin: auto;
+	font-size: 18px;
+	line-height: 1.9;
+}
+
+.brand-logo {
+    max-width: 100%;
+    height: auto;
+    transition: transform 0.3s ease; /* Efek animasi saat disentuh */
+}
+
+.brand-item:hover .brand-logo {
+    transform: scale(1.1); /* Zoom-in saat hover */
+}
+
+/* Media Query untuk layar kecil */
+@media (max-width: 576px) {
+    .brand-item img {
+        width: 70%; /* Sesuaikan ukuran logo di layar yang lebih kecil */
+    }
+}
+
+.brand-logo {
+    width: 100%;
+    max-height: 100px;
+    object-fit: contain;
+    transition: transform 0.3s, filter 0.3s; /* Animasi saat hover */
+    filter: grayscale(100%); /* Gambar awal berwarna abu-abu */
+}
+.brand-item:hover .brand-logo {
+    transform: scale(1.1); /* Memperbesar gambar saat hover */
+    filter: none; /* Menghilangkan efek abu-abu saat hover */
+}
+#brands h2 {
+    position: relative;
+    padding: 0 15px; /* Memberikan padding samping */
+}
+#brands h2:before,
+#brands h2:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 50px; /* Panjang garis */
+    height: 1px; /* Ketebalan garis */
+    background-color: #1c428f; /* Warna garis */
+}
+#brands h2:before {
+    left: 0;
+}
+#brands h2:after {
+    right: 0;
+}
+
+#merek h2{
+    font-family: 'Poppins', sans-serif;
+    font-size: 32px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.carousel-inner {
+    display: flex;
+    align-items: center;
+}
+
+.carousel-item img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+h2 {
+    margin-bottom: 40px;
+}
+
+.testimonial-card {
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+#testimonials h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 32px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.card-title {
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.card-text {
+    font-style: italic;
+    font-size: 10px;
+}
+
+
+.testimonial-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 10px;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.bxs-quote-left {
+    font-size: 34px;
+    color: #1c428f;
+}
+
+.user-section {
+    position: relative;
+}
+
+
+.random-rating {
+    font-size: 1.2rem;
+    color: #ffc107;
+}
+
+.user-section img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    margin-bottom: 0.5rem;
+}
+
+.stars {
+    color: #ffc107;
+}
+
+.card {
+    border: none;
+    transition: border 0.3s, transform 0.3s;
+}
+
+#produk h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 32px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+#produk a {
+    font-family: 'Poppins', sans-serif;
+}
+
+.hover-border:hover {
+    border: 1px solid black;
+    transform: scale(1.05);
+}
+
+.btn-outline-secondary {
+    color: #6c757d; /* Warna teks */
+    border-color: #6c757d; /* Warna border */
+}
+
+.btn-outline-secondary:hover {
+    background-color: #6c757d; /* Warna latar belakang saat hover */
+    color: white; /* Warna teks saat hover */
+}
+
+
+.card {
+    box-shadow: 0 4px 20px rgba(0, 0, 139, 0.5);
+}
+
+.card-title {
+    font-family: 'Poppins', sans-serif;
+    font-weight: normal;
+}
+
+.card-text {
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+    font-style: normal;
+}
+
+.love-icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 1.5rem;
+    color: grey;
+    transition: color 0.3s;
+    cursor: pointer;
+}
+
+.love-icon.active {
+    color: red;
+}
+
+#contact h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 32px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.bg-dark {
+    background-color: #1c428f !important;
+/* Warna navy */
+color: #ffffff;
+/* Teks putih */
+}
+
+
+
+.animate__animated {
+    transition: transform 0.3s;
+}
+
+.zoom {
+    transform: scale(1.1);
+}
+
+.invalid-feedback {
+    color: red;
+    font-size: 0.875rem;
+}
+.form-control {
+    width: 100%;
+}
